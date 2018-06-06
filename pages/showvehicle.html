@@ -1,0 +1,3065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <style>
+.cm{
+padding-left:2px;
+}
+  .tpim{
+    margins: 0px;
+    overflow:hidden;
+  }
+
+   .control-label{
+     font-size: 12px;
+   }
+  .nav-tabs-dropdown {
+    display: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .nav-tabs-dropdown:before {
+    content: "\e114";
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    right: 30px;
+  }
+
+  @media screen and (min-width: 769px) {
+    #nav-tabs-wrapper {
+      display: block!important;
+    }
+  }
+  @media screen and (max-width: 768px) {
+      .nav-tabs-dropdown {
+          display: block;
+      }
+      #nav-tabs-wrapper {
+          display: none;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          text-align: center;
+      }
+     .nav-tabs-horizontal {
+          min-height: 20px;
+          padding: 19px;
+          margin-bottom: 20px;
+          background-color: #f5f5f5;
+          border: 1px solid #e3e3e3;
+          border-radius: 4px;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+     }
+      .nav-tabs-horizontal  > li {
+          float: none;
+      }
+      .nav-tabs-horizontal  > li + li {
+          margin-left: 10px;
+      }
+      .nav-tabs-horizontal > li,
+      .nav-tabs-horizontal > li > a {
+          background: transparent;
+          width: 100%;
+      }
+      .nav-tabs-horizontal  > li > a {
+          border-radius: 4px;
+      }
+      .nav-tabs-horizontal  > li.active > a,
+      .nav-tabs-horizontal  > li.active > a:hover,
+      .nav-tabs-horizontal  > li.active > a:focus {
+          color: #ffffff;
+          background-color: #428bca;
+      }
+  }
+  .na>li>a{
+        padding: 2px 2px;
+
+  }
+  .nv1>li>a{
+    padding: 5px 10px;
+  }
+  .well {
+    padding:12px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    margin-left: 0px;
+
+  }
+
+
+  #st  {
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+
+  #st th, td {
+
+    padding: 8px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  #status  {
+    border-collapse: collapse;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #st  {
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+
+  #st th, td {
+
+    padding: 8px;
+    font-size: 11px;
+    text-align: left;
+    border-bottom: 0px solid #ddd;
+  }
+  #vehicle  {
+    border-collapse: collapse;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+  #vehicle th, td {
+
+    padding: 8px;
+    font-size: 11px;
+    text-align: left;
+
+  }
+
+
+  </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                  <a class="navbar-brand" href="#">Fueblabs</a>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav nav1" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i>Work Order<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-check-circle"></i> Inspection<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-exclamation-circle fa-fw"></i>Issues<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bell fa-fw"></i>Remainders<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i>Service<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-tint fa-fw"></i>Fuel<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-car fa-fw"></i>Vehicles<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-th-large fa-fw"></i>Parts & Inventory<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text fa-fw"></i>Reports<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class=" fa fa-cog fa-fw"></i> Settings</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="page-header">Vehicle List / BharathBenz 3123R</h4>
+                </div>
+
+                <div class="container">
+                <div class="row">
+  <div class="col-md-2">
+
+  <img src="http://1.bp.blogspot.com/-EDdSUuGNHUI/Tlc3gKQH8vI/AAAAAAAAXT4/red_AahdGeM/s1600/mercedes%2Bbenz%2Bcar%2Bimages-2.jpg" width="150" height="100">
+
+</div>
+<div class="col-md-7" style="padding-top:5px; ">
+
+  <textbox >
+     <b style="font-size:20px">BharatBenz 3123R</b><br><br>
+     <span>Truck - 2017 BharatBenz2017 - WD3PVKXB2R7Z69ZLS - KA24F1999</span><br>
+     <span>1,200km&nbsp;&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+           <b style="color:#00cc00;">Active</b>&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+           No Group&nbsp;&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+           Unassigned&nbsp;&nbsp;<i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+     </span>
+
+     </textbox>
+  </div>
+
+</div></div>
+
+
+
+<br>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-3" >
+            <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary">Tabs</a>
+            <ul id="nav-tabs-wrapper" class="na nav nav-tabs nav-pills nav-stacked well">
+              <li class="active"><a href="#overview" data-toggle="tab"><i class="fa fa-dashcube" aria-hidden="true"></i>&nbsp;&nbsp;Vehicle Overview</a></li>
+              <li><a href="#photos" data-toggle="tab"><i class="fa fa-file-image-o" aria-hidden="true"></i>&nbsp;&nbsp;Photos</a></li>
+              <li><a href="#doc" data-toggle="tab"><i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;&nbsp;Documents</a></li>
+              <li><a href="#comm" data-toggle="tab"><i class="fa fa-commenting" aria-hidden="true"></i>&nbsp;&nbsp;Comments</a></li><hr>
+              <li><a href="#work_order" data-toggle="tab">Work Order<span class="" style="float:right;font-size:12px;">0</span></a></li>
+              <li><a href="#inspect" data-toggle="tab">Inspections<span class="" style="float:right;font-size:12px;">0</span></a></li>
+                <li><a href="#issues" data-toggle="tab">Issues<span class="" style="float:right;font-size:12px;">0</span></a></li>
+                <li><a href="#faults" data-toggle="tab">Faults<span class="" style="float:right;font-size:12px;">0</span></a></li>
+                <li><a href="#remain" data-toggle="tab">Remainders<span class="" style="float:right;font-size:12px;">0</span></a></li>
+                <li><a href="#serviceh" data-toggle="tab">Service History<span class="" style="float:right;font-size:12px;">0</span></a></li>
+                <li><a href="#fuel_log" data-toggle="tab">Fuel log<span class="" style="float:right;font-size:12px;">0</span></a></li>
+                <li><a href="#parts_usage" data-toggle="tab">Parts Usage<span class="" style="float:right;font-size:12px;">0</span></a></li>
+                <li><a href="#assig_his" data-toggle="tab">Assignment History<span class="" style="float:right;font-size:12px;">0</span></a></li>
+                <li><a href="#odo_his" data-toggle="tab">Odometer History<span class="" style="float:right;font-size:12px;">1</span></a></li>
+                <li><a href="#loc_his" data-toggle="tab">Location History<span class="" style="float:right;font-size:12px;">0</span></a></li>
+                  <li><a href="#settings" data-toggle="tab"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;&nbsp;Settings</a></li>
+            </ul>
+        </div><br>
+        <div class="col-sm-9" style="padding-left:2px;">
+            <div class="tab-content " style="margin-top:-19px">
+                <div role="tabpanel" class="tab-pane fade in active" id="overview">
+                  <!--top tab-->
+<br>
+                  <div class="col-lg-13">
+
+                              <!-- Nav tabs -->
+                              <ul class="nav nv1 nav-pills resp-tabs-list ">
+                                  <li class="active"><a href="#details" data-toggle="tab">Details</a>
+                                  </li>
+                                  <li><a href="#specs" data-toggle="tab">Specs</a>
+                                  </li>
+                                  <li><a href="#et" data-toggle="tab">Engine & Transmission</a>
+                                  </li>
+                                  <li><a href="#wt" data-toggle="tab">Wheels & Tires</a>
+                                  </li>
+                                  <li><a href="#fluids" data-toggle="tab">Fluids</a>
+                                  </li>
+                                  <li><a href="#purchase" data-toggle="tab">Purchase</a>
+                                  </li>
+                                  <li><a href="#ll" data-toggle="tab">Lone/Lease</a>
+                                  </li>
+
+                              </ul>
+                               <br>
+                              <!-- Tab panes -->
+                              <div class="tab-content nv">
+                                  <div class="tab-pane fade in active" id="details">
+                                <!--details-->
+                                    <div class="col-lg-5 cm">
+                                        <div class="panel panel-default" >
+
+                                            <div class="panel-body" >
+                                              <table 	id="st">
+
+                                                <tr>
+                                                <td style="color:#006eff"><b style="font-size:25px"><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;0.00 </b><br>Total Cost/km</td>
+                                                <td style="color:#006eff"><b style="font-size:25px">&nbsp;0</b><br>km/L</td>
+
+                                                </tr>
+                                                <tr>
+                                                <td style="color:#006eff"><b style="font-size:25px"><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;0.00 </b><br>Service Costs</td>
+                                                <td style="color:#006eff"><b style="font-size:25px">&nbsp;0</b><br>Fuel Costs</td>
+
+                                                </tr>
+                                                <tr>
+                                                <td>Km/L</td>
+                                                <td><b>Graph</b> </td>
+                                                </tr>
+                                                </table>
+                                                      </div>
+                                                   </div>
+                                                   </div>
+                                  <div class="col-lg-5 cm">
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            Open Issues
+                                            <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                                          <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                                              Add Issues</button>
+                                        </div>
+                                          <div class="panel-body">
+                                            <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                                                </div>
+                                                 </div>
+                                                 </div>
+                                  <div class="col-lg-5 cm">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                          Service Remainders
+                                      </div>
+                                        <div class="panel-body">
+                                          <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+                                              </div>
+                                              </div>
+                                              </div>
+                                          <div class="col-lg-5 cm" style="padding-left:2px;">
+                                              <div class="panel panel-default">
+                                                  <div class="panel-body">
+
+                                         <table id="vehicle">
+                                        <tr>
+                                        <td><b style="font-size:12px;">Vehicle Details<b>
+                                        </td>
+                                        <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                                        <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                                        Edit</button>
+                                      </td>
+                                      </tr>
+                                      <tr>
+                                      <td>Name</td>
+                                      <td><b>BharatBenz 3123R</b></td>
+                                      </tr>
+                                      <tr>
+                                      <td>Group</td>
+                                      <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+                                      </tr>
+                                      <tr>
+                                      <td>Operator</td>
+                                      <td><b>Unassigned</b></td>
+                                      </tr>
+                                      <tr>
+                                      <td>Type</td>
+                                      <td><b>Truck</b></td>
+                                      </tr>
+                                      <tr>
+                                      <td>Status</td>
+                                      <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+                                      </tr>
+                                       <tr>
+                                      <td>VIN/SN</td>
+                                      <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+                                      </tr>
+                                      <tr>
+                                      <td>License Plate</td>
+                                      <td><b>KA24F1999</b></td>
+                                      </tr>
+                                      <tr>
+                                      <td>Year</td>
+                                      <td><b>2017</b></td>
+                                      </tr>
+                                      <tr>
+                                      <td>Make</td>
+                                      <td><b>BharatBenz<b/></td>
+                                      </tr>
+                                      <tr>
+                                      <td>Model</td>
+                                      <td><b>2017</b></td>
+                                      </tr>
+                                      <tr>
+                                      <td>Trim</td>
+                                      <td><b>XLE<b/></td>
+                                      </tr>
+                                      <tr>
+                                       <td>Registration<br>State/Province</td>
+                                       <td><b>KA</b></td>
+                                        </tr>
+                                      </table>
+                                                        </div>
+
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-5 cm">
+                                            <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                  Renewal Remainders
+                                              </div>
+                                                <div class="panel-body">
+                                                  <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                                                      </div>
+
+                                            </div>
+                                          </div>
+                                          <div class="col-lg-5 cm">
+                                            <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                  Critical Faults
+                                              </div>
+                                                <div class="panel-body">
+                                                  <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                                                      </div>
+                                            </div>
+                                          </div>
+                                          <div class="col-lg-5 cm">
+                                            <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                  Comments
+                                                  <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                                                <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                                                    Add Comments</button>
+                                              </div>
+                                                <div class="panel-body">
+                                                  <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                                                      </div>
+                                            </div>
+
+                                          </div>
+                                        </div><!--details-->
+
+  <!--specifications-->          <div class="tab-pane fade" id="specs">
+  <div class="col-lg-5 cm">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            Open Issues(Spec)
+            <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+          <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+              Add Issues</button>
+        </div>
+          <div class="panel-body">
+            <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                </div>
+                 </div>
+                 </div>
+  <div class="col-lg-5 cm">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Service Remainders
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+              </div>
+              </div>
+              </div>
+          <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+         <table 	id="status">
+        <tr>
+        <td><b style="font-size:12px;">Vehicle Details<b>
+        </td>
+        <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+        Edit</button>
+      </td>
+      </tr>
+      <tr>
+      <td>Name</td>
+      <td><b>BharatBenz 3123R</b></td>
+      </tr>
+      <tr>
+      <td>Group</td>
+      <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+      </tr>
+      <tr>
+      <td>Operator</td>
+      <td><b>Unassigned</b></td>
+      </tr>
+      <tr>
+      <td>Type</td>
+      <td><b>Truck</b></td>
+      </tr>
+      <tr>
+      <td>Status</td>
+      <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+      </tr>
+       <tr>
+      <td>VIN/SN</td>
+      <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+      </tr>
+      <tr>
+      <td>License Plate</td>
+      <td><b>KA24F1999</b></td>
+      </tr>
+      <tr>
+      <td>Year</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Make</td>
+      <td><b>BharatBenz<b/></td>
+      </tr>
+      <tr>
+      <td>Model</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Trim</td>
+      <td><b>XLE<b/></td>
+      </tr>
+      <tr>
+       <td>Registration<br>State/Province</td>
+       <td><b>KA</b></td>
+        </tr>
+         </table>
+                        </div>
+
+              </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Renewal Remainders
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                      </div>
+
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Critical Faults
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                      </div>
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Comments
+                  <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                    Add Comments</button>
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                      </div>
+            </div>
+
+          </div>
+
+                                    </div>
+                                     <!--specifications-->
+  <!--Engine&specifications-->    <div class="tab-pane fade" id="et">
+
+<div class="col-lg-5 cm">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Open Issues(Engine & Spec)
+          <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+            Add Issues</button>
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+              </div>
+               </div>
+               </div>
+<div class="col-lg-5 cm">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        Service Remainders
+    </div>
+      <div class="panel-body">
+        <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+            </div>
+            </div>
+            </div>
+        <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+                <div class="panel-body">
+       <table 	id="status">
+      <tr>
+      <td><b style="font-size:14px;">Vehicle Details<b>
+      </td>
+      <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+      <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+      Edit</button>
+    </td>
+    </tr>
+    <tr>
+    <td>Name</td>
+    <td><b>BharatBenz 3123R</b></td>
+    </tr>
+    <tr>
+    <td>Group</td>
+    <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+    </tr>
+    <tr>
+    <td>Operator</td>
+    <td><b>Unassigned</b></td>
+    </tr>
+    <tr>
+    <td>Type</td>
+    <td><b>Truck</b></td>
+    </tr>
+    <tr>
+    <td>Status</td>
+    <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+    </tr>
+     <tr>
+    <td>VIN/SN</td>
+    <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+    </tr>
+    <tr>
+    <td>License Plate</td>
+    <td><b>KA24F1999</b></td>
+    </tr>
+    <tr>
+    <td>Year</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Make</td>
+    <td><b>BharatBenz<b/></td>
+    </tr>
+    <tr>
+    <td>Model</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Trim</td>
+    <td><b>XLE<b/></td>
+    </tr>
+    <tr>
+     <td>Registration<br>State/Province</td>
+     <td><b>KA</b></td>
+      </tr>
+       </table>
+                      </div>
+
+            </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Renewal Remainders
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                    </div>
+
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Critical Faults
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                    </div>
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Comments
+                <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+              <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                  Add Comments</button>
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                    </div>
+          </div>
+
+        </div>
+                                    </div><!--Engine&specifications-->
+  <!--Wheels&Tires-->              <div class="tab-pane fade" id="wt">
+
+<div class="col-lg-5 cm">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Open Issues(Wheels)
+          <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+            Add Issues</button>
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+              </div>
+               </div>
+               </div>
+<div class="col-lg-5 cm">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        Service Remainders
+    </div>
+      <div class="panel-body">
+        <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+            </div>
+            </div>
+            </div>
+        <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+                <div class="panel-body">
+       <table 	id="status">
+      <tr>
+      <td><b style="font-size:14px;">Vehicle Details<b>
+      </td>
+      <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+      <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+      Edit</button>
+    </td>
+    </tr>
+    <tr>
+    <td>Name</td>
+    <td><b>BharatBenz 3123R</b></td>
+    </tr>
+    <tr>
+    <td>Group</td>
+    <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+    </tr>
+    <tr>
+    <td>Operator</td>
+    <td><b>Unassigned</b></td>
+    </tr>
+    <tr>
+    <td>Type</td>
+    <td><b>Truck</b></td>
+    </tr>
+    <tr>
+    <td>Status</td>
+    <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+    </tr>
+     <tr>
+    <td>VIN/SN</td>
+    <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+    </tr>
+    <tr>
+    <td>License Plate</td>
+    <td><b>KA24F1999</b></td>
+    </tr>
+    <tr>
+    <td>Year</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Make</td>
+    <td><b>BharatBenz<b/></td>
+    </tr>
+    <tr>
+    <td>Model</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Trim</td>
+    <td><b>XLE<b/></td>
+    </tr>
+    <tr>
+     <td>Registration<br>State/Province</td>
+     <td><b>KA</b></td>
+      </tr>
+       </table>
+                      </div>
+
+            </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Renewal Remainders
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                    </div>
+
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Critical Faults
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                    </div>
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Comments
+                <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+              <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                  Add Comments</button>
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                    </div>
+          </div>
+
+        </div>
+                                    </div><!--Weels&Tires-->
+  <!--fluids-->                   <div class="tab-pane fade" id="fluids">
+
+<div class="col-lg-5 cm">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Open Issues(fluids)
+          <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+            Add Issues</button>
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+              </div>
+               </div>
+               </div>
+<div class="col-lg-5 cm">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        Service Remainders
+    </div>
+      <div class="panel-body">
+        <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+            </div>
+            </div>
+            </div>
+        <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+                <div class="panel-body">
+       <table 	id="status">
+      <tr>
+      <td><b style="font-size:14px;">Vehicle Details<b>
+      </td>
+      <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+      <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+      Edit</button>
+    </td>
+    </tr>
+    <tr>
+    <td>Name</td>
+    <td><b>BharatBenz 3123R</b></td>
+    </tr>
+    <tr>
+    <td>Group</td>
+    <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+    </tr>
+    <tr>
+    <td>Operator</td>
+    <td><b>Unassigned</b></td>
+    </tr>
+    <tr>
+    <td>Type</td>
+    <td><b>Truck</b></td>
+    </tr>
+    <tr>
+    <td>Status</td>
+    <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+    </tr>
+     <tr>
+    <td>VIN/SN</td>
+    <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+    </tr>
+    <tr>
+    <td>License Plate</td>
+    <td><b>KA24F1999</b></td>
+    </tr>
+    <tr>
+    <td>Year</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Make</td>
+    <td><b>BharatBenz<b/></td>
+    </tr>
+    <tr>
+    <td>Model</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Trim</td>
+    <td><b>XLE<b/></td>
+    </tr>
+    <tr>
+     <td>Registration<br>State/Province</td>
+     <td><b>KA</b></td>
+      </tr>
+       </table>
+                      </div>
+
+            </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Renewal Remainders
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                    </div>
+
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Critical Faults
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                    </div>
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Comments
+                <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+              <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                  Add Comments</button>
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                    </div>
+          </div>
+
+        </div>
+                                      </div><!--fluids-->
+  <!--purchase-->                 <div class="tab-pane fade" id="purchase">
+
+<div class="col-lg-5 cm">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Open Issues(Purchase)
+          <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+            Add Issues</button>
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+              </div>
+               </div>
+               </div>
+<div class="col-lg-5 cm">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        Service Remainders
+    </div>
+      <div class="panel-body">
+        <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+            </div>
+            </div>
+            </div>
+        <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+                <div class="panel-body">
+       <table 	id="status">
+      <tr>
+      <td><b style="font-size:14px;">Vehicle Details<b>
+      </td>
+      <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+      <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+      Edit</button>
+    </td>
+    </tr>
+    <tr>
+    <td>Name</td>
+    <td><b>BharatBenz 3123R</b></td>
+    </tr>
+    <tr>
+    <td>Group</td>
+    <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+    </tr>
+    <tr>
+    <td>Operator</td>
+    <td><b>Unassigned</b></td>
+    </tr>
+    <tr>
+    <td>Type</td>
+    <td><b>Truck</b></td>
+    </tr>
+    <tr>
+    <td>Status</td>
+    <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+    </tr>
+     <tr>
+    <td>VIN/SN</td>
+    <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+    </tr>
+    <tr>
+    <td>License Plate</td>
+    <td><b>KA24F1999</b></td>
+    </tr>
+    <tr>
+    <td>Year</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Make</td>
+    <td><b>BharatBenz<b/></td>
+    </tr>
+    <tr>
+    <td>Model</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Trim</td>
+    <td><b>XLE<b/></td>
+    </tr>
+    <tr>
+     <td>Registration<br>State/Province</td>
+     <td><b>KA</b></td>
+      </tr>
+       </table>
+                      </div>
+
+            </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Renewal Remainders
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                    </div>
+
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Critical Faults
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                    </div>
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Comments
+                <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+              <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                  Add Comments</button>
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                    </div>
+          </div>
+
+        </div>
+                                    </div>  <!--purchase-->
+
+    <!--lone/Lease-->              <div class="tab-pane fade" id="ll">
+
+  <div class="col-lg-5 cm">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            Open Issues(Lone/Lease)
+            <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+          <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+              Add Issues</button>
+        </div>
+          <div class="panel-body">
+            <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                </div>
+                 </div>
+                 </div>
+  <div class="col-lg-5 cm">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Service Remainders
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+              </div>
+              </div>
+              </div>
+          <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+         <table 	id="status">
+        <tr>
+        <td><b style="font-size:14px;">Vehicle Details<b>
+        </td>
+        <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+        Edit</button>
+      </td>
+      </tr>
+      <tr>
+      <td>Name</td>
+      <td><b>BharatBenz 3123R</b></td>
+      </tr>
+      <tr>
+      <td>Group</td>
+      <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+      </tr>
+      <tr>
+      <td>Operator</td>
+      <td><b>Unassigned</b></td>
+      </tr>
+      <tr>
+      <td>Type</td>
+      <td><b>Truck</b></td>
+      </tr>
+      <tr>
+      <td>Status</td>
+      <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+      </tr>
+       <tr>
+      <td>VIN/SN</td>
+      <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+      </tr>
+      <tr>
+      <td>License Plate</td>
+      <td><b>KA24F1999</b></td>
+      </tr>
+      <tr>
+      <td>Year</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Make</td>
+      <td><b>BharatBenz<b/></td>
+      </tr>
+      <tr>
+      <td>Model</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Trim</td>
+      <td><b>XLE<b/></td>
+      </tr>
+      <tr>
+       <td>Registration<br>State/Province</td>
+       <td><b>KA</b></td>
+        </tr>
+         </table>
+                        </div>
+
+              </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Renewal Remainders
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                      </div>
+
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Critical Faults
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                      </div>
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Comments
+                  <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                    Add Comments</button>
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                      </div>
+            </div>
+
+          </div>
+                                          </div><!--lone/Lease-->
+
+                  </div><!--top tab-->
+                </div></div>
+                <div role="tabpanel" class="tab-pane fade" id="photos">
+                  <h1>hello</h1>
+                      </div>
+                <div role="tabpanel" class="tab-pane fade in" id="doc">
+                  <h1>hello1</h1>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade in" id="comm">
+                      <h1>hello2</h1>
+
+                        </div>
+        <!--work_order-->  <div role="tabpanel" class="tab-pane fade in" id="work_order" >
+                          <div class="col-lg-5 cm"  >
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Open Issues W
+                                    <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                                  <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                                      Add Issues</button>
+                                </div>
+                                  <div class="panel-body">
+                                    <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                                        </div>
+                                         </div>
+                                         </div>
+                          <div class="col-lg-5 cm">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                  Service Remainders
+                              </div>
+                                <div class="panel-body">
+                                  <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+                                      </div>
+                                      </div>
+                                      </div>
+                                  <div class="col-lg-5 cm">
+                                      <div class="panel panel-default">
+                                          <div class="panel-body">
+                                 <table id="status">
+                                <tr>
+                                <td><b style="font-size:14px;">Vehicle Details<b>
+                                </td>
+                                <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                                <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                                Edit</button>
+                              </td>
+                              </tr>
+                              <tr>
+                              <td>Name</td>
+                              <td><b>BharatBenz 3123R</b></td>
+                              </tr>
+                              <tr>
+                              <td>Group</td>
+                              <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+                              </tr>
+                              <tr>
+                              <td>Operator</td>
+                              <td><b>Unassigned</b></td>
+                              </tr>
+                              <tr>
+                              <td>Type</td>
+                              <td><b>Truck</b></td>
+                              </tr>
+                              <tr>
+                              <td>Status</td>
+                              <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+                              </tr>
+                               <tr>
+                              <td>VIN/SN</td>
+                              <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+                              </tr>
+                              <tr>
+                              <td>License Plate</td>
+                              <td><b>KA24F1999</b></td>
+                              </tr>
+                              <tr>
+                              <td>Year</td>
+                              <td><b>2017</b></td>
+                              </tr>
+                              <tr>
+                              <td>Make</td>
+                              <td><b>BharatBenz<b/></td>
+                              </tr>
+                              <tr>
+                              <td>Model</td>
+                              <td><b>2017</b></td>
+                              </tr>
+                              <tr>
+                              <td>Trim</td>
+                              <td><b>XLE<b/></td>
+                              </tr>
+                              <tr>
+                               <td>Registration<br>State/Province</td>
+                               <td><b>KA</b></td>
+                                </tr>
+                                 </table>
+                                                </div>
+
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-5 cm">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                          Renewal Remainders
+                                      </div>
+                                        <div class="panel-body">
+                                          <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                                              </div>
+
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-5 cm">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                          Critical Faults
+                                      </div>
+                                        <div class="panel-body">
+                                          <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                                              </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-5 cm">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                          Comments
+                                          <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                                        <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                                            Add Comments</button>
+                                      </div>
+                                        <div class="panel-body">
+                                          <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                                              </div>
+                                    </div>
+
+                                  </div>
+
+                            </div><!--work_order-->
+          <!--Inspections--><div role="tabpanel" class="tab-pane fade in" id="inspect">
+          <div class="col-lg-5 cm"  >
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    Open Issues IN
+                    <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                  <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                      Add Issues</button>
+                </div>
+                  <div class="panel-body">
+                    <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                        </div>
+                         </div>
+                         </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Service Remainders
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+                      </div>
+                      </div>
+                      </div>
+                  <div class="col-lg-5 cm">
+                      <div class="panel panel-default">
+                          <div class="panel-body">
+                 <table id="status">
+                <tr>
+                <td><b style="font-size:14px;">Vehicle Details<b>
+                </td>
+                <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                Edit</button>
+              </td>
+              </tr>
+              <tr>
+              <td>Name</td>
+              <td><b>BharatBenz 3123R</b></td>
+              </tr>
+              <tr>
+              <td>Group</td>
+              <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+              </tr>
+              <tr>
+              <td>Operator</td>
+              <td><b>Unassigned</b></td>
+              </tr>
+              <tr>
+              <td>Type</td>
+              <td><b>Truck</b></td>
+              </tr>
+              <tr>
+              <td>Status</td>
+              <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+              </tr>
+               <tr>
+              <td>VIN/SN</td>
+              <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+              </tr>
+              <tr>
+              <td>License Plate</td>
+              <td><b>KA24F1999</b></td>
+              </tr>
+              <tr>
+              <td>Year</td>
+              <td><b>2017</b></td>
+              </tr>
+              <tr>
+              <td>Make</td>
+              <td><b>BharatBenz<b/></td>
+              </tr>
+              <tr>
+              <td>Model</td>
+              <td><b>2017</b></td>
+              </tr>
+              <tr>
+              <td>Trim</td>
+              <td><b>XLE<b/></td>
+              </tr>
+              <tr>
+               <td>Registration<br>State/Province</td>
+               <td><b>KA</b></td>
+                </tr>
+                 </table>
+                                </div>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-5 cm">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Renewal Remainders
+                      </div>
+                        <div class="panel-body">
+                          <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                              </div>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-5 cm">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Critical Faults
+                      </div>
+                        <div class="panel-body">
+                          <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                              </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 cm">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Comments
+                          <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                        <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                            Add Comments</button>
+                      </div>
+                        <div class="panel-body">
+                          <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                              </div>
+                    </div>
+
+                  </div>
+
+          </div><!--Inspections-->
+
+  <!--issue-->              <div role="tabpanel" class="tab-pane fade in" id="issues">
+  <div class="col-lg-5 cm"  >
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            Open Issues I
+            <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+          <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+              Add Issues</button>
+        </div>
+          <div class="panel-body">
+            <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                </div>
+                 </div>
+                 </div>
+  <div class="col-lg-5 cm">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Service Remainders
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+              </div>
+              </div>
+              </div>
+          <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+         <table id="status">
+        <tr>
+        <td><b style="font-size:14px;">Vehicle Details<b>
+        </td>
+        <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+        Edit</button>
+      </td>
+      </tr>
+      <tr>
+      <td>Name</td>
+      <td><b>BharatBenz 3123R</b></td>
+      </tr>
+      <tr>
+      <td>Group</td>
+      <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+      </tr>
+      <tr>
+      <td>Operator</td>
+      <td><b>Unassigned</b></td>
+      </tr>
+      <tr>
+      <td>Type</td>
+      <td><b>Truck</b></td>
+      </tr>
+      <tr>
+      <td>Status</td>
+      <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+      </tr>
+       <tr>
+      <td>VIN/SN</td>
+      <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+      </tr>
+      <tr>
+      <td>License Plate</td>
+      <td><b>KA24F1999</b></td>
+      </tr>
+      <tr>
+      <td>Year</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Make</td>
+      <td><b>BharatBenz<b/></td>
+      </tr>
+      <tr>
+      <td>Model</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Trim</td>
+      <td><b>XLE<b/></td>
+      </tr>
+      <tr>
+       <td>Registration<br>State/Province</td>
+       <td><b>KA</b></td>
+        </tr>
+         </table>
+                        </div>
+
+              </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Renewal Remainders
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                      </div>
+
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Critical Faults
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                      </div>
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Comments
+                  <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                    Add Comments</button>
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                      </div>
+            </div>
+
+          </div>
+                           </div><!--issue-->
+
+    <!--faults-->           <div role="tabpanel" class="tab-pane fade in" id="faults">
+    <div class="col-lg-5 cm"  >
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              Open Issues
+              <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+            <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                Add Issues</button>
+          </div>
+            <div class="panel-body">
+              <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                  </div>
+                   </div>
+                   </div>
+    <div class="col-lg-5 cm">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            Service Remainders
+        </div>
+          <div class="panel-body">
+            <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+                </div>
+                </div>
+                </div>
+            <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+           <table id="status">
+          <tr>
+          <td><b style="font-size:14px;">Vehicle Details<b>
+          </td>
+          <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+          <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+          Edit</button>
+        </td>
+        </tr>
+        <tr>
+        <td>Name</td>
+        <td><b>BharatBenz 3123R</b></td>
+        </tr>
+        <tr>
+        <td>Group</td>
+        <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+        </tr>
+        <tr>
+        <td>Operator</td>
+        <td><b>Unassigned</b></td>
+        </tr>
+        <tr>
+        <td>Type</td>
+        <td><b>Truck</b></td>
+        </tr>
+        <tr>
+        <td>Status</td>
+        <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+        </tr>
+         <tr>
+        <td>VIN/SN</td>
+        <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+        </tr>
+        <tr>
+        <td>License Plate</td>
+        <td><b>KA24F1999</b></td>
+        </tr>
+        <tr>
+        <td>Year</td>
+        <td><b>2017</b></td>
+        </tr>
+        <tr>
+        <td>Make</td>
+        <td><b>BharatBenz<b/></td>
+        </tr>
+        <tr>
+        <td>Model</td>
+        <td><b>2017</b></td>
+        </tr>
+        <tr>
+        <td>Trim</td>
+        <td><b>XLE<b/></td>
+        </tr>
+        <tr>
+         <td>Registration<br>State/Province</td>
+         <td><b>KA</b></td>
+          </tr>
+           </table>
+                          </div>
+
+                </div>
+            </div>
+            <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    Renewal Remainders
+                </div>
+                  <div class="panel-body">
+                    <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                        </div>
+
+              </div>
+            </div>
+            <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    Critical Faults
+                </div>
+                  <div class="panel-body">
+                    <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                        </div>
+              </div>
+            </div>
+            <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    Comments
+                    <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                  <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                      Add Comments</button>
+                </div>
+                  <div class="panel-body">
+                    <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                        </div>
+              </div>
+
+            </div>
+                            </div><!--faults-->
+<!--remain-->               <div role="tabpanel" class="tab-pane fade in" id="remain">
+<div class="col-lg-5 cm"  >
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Open Issues R
+          <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+            Add Issues</button>
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+              </div>
+               </div>
+               </div>
+<div class="col-lg-5 cm">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        Service Remainders
+    </div>
+      <div class="panel-body">
+        <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+            </div>
+            </div>
+            </div>
+        <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+                <div class="panel-body">
+       <table id="status">
+      <tr>
+      <td><b style="font-size:14px;">Vehicle Details<b>
+      </td>
+      <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+      <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+      Edit</button>
+    </td>
+    </tr>
+    <tr>
+    <td>Name</td>
+    <td><b>BharatBenz 3123R</b></td>
+    </tr>
+    <tr>
+    <td>Group</td>
+    <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+    </tr>
+    <tr>
+    <td>Operator</td>
+    <td><b>Unassigned</b></td>
+    </tr>
+    <tr>
+    <td>Type</td>
+    <td><b>Truck</b></td>
+    </tr>
+    <tr>
+    <td>Status</td>
+    <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+    </tr>
+     <tr>
+    <td>VIN/SN</td>
+    <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+    </tr>
+    <tr>
+    <td>License Plate</td>
+    <td><b>KA24F1999</b></td>
+    </tr>
+    <tr>
+    <td>Year</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Make</td>
+    <td><b>BharatBenz<b/></td>
+    </tr>
+    <tr>
+    <td>Model</td>
+    <td><b>2017</b></td>
+    </tr>
+    <tr>
+    <td>Trim</td>
+    <td><b>XLE<b/></td>
+    </tr>
+    <tr>
+     <td>Registration<br>State/Province</td>
+     <td><b>KA</b></td>
+      </tr>
+       </table>
+                      </div>
+
+            </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Renewal Remainders
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                    </div>
+
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Critical Faults
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                    </div>
+          </div>
+        </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Comments
+                <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+              <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                  Add Comments</button>
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                    </div>
+          </div>
+
+        </div>
+                         </div><!--remain-->
+  <!--service History--> <div role="tabpanel" class="tab-pane fade in" id="serviceh">
+  <div class="col-lg-5 cm"  >
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            Open Issues
+            <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+          <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+              Add Issues</button>
+        </div>
+          <div class="panel-body">
+            <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                </div>
+                 </div>
+                 </div>
+  <div class="col-lg-5 cm">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Service Remainders
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+              </div>
+              </div>
+              </div>
+          <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+         <table id="status">
+        <tr>
+        <td><b style="font-size:14px;">Vehicle Details<b>
+        </td>
+        <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+        Edit</button>
+      </td>
+      </tr>
+      <tr>
+      <td>Name</td>
+      <td><b>BharatBenz 3123R</b></td>
+      </tr>
+      <tr>
+      <td>Group</td>
+      <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+      </tr>
+      <tr>
+      <td>Operator</td>
+      <td><b>Unassigned</b></td>
+      </tr>
+      <tr>
+      <td>Type</td>
+      <td><b>Truck</b></td>
+      </tr>
+      <tr>
+      <td>Status</td>
+      <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+      </tr>
+       <tr>
+      <td>VIN/SN</td>
+      <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+      </tr>
+      <tr>
+      <td>License Plate</td>
+      <td><b>KA24F1999</b></td>
+      </tr>
+      <tr>
+      <td>Year</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Make</td>
+      <td><b>BharatBenz<b/></td>
+      </tr>
+      <tr>
+      <td>Model</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Trim</td>
+      <td><b>XLE<b/></td>
+      </tr>
+      <tr>
+       <td>Registration<br>State/Province</td>
+       <td><b>KA</b></td>
+        </tr>
+         </table>
+                        </div>
+
+              </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Renewal Remainders
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                      </div>
+
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Critical Faults
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                      </div>
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Comments
+                  <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                    Add Comments</button>
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                      </div>
+            </div>
+
+          </div>
+                          </div><!--service History-->
+      <!--fuel log-->     <div role="tabpanel" class="tab-pane fade in" id="fuel_log">
+      <div class="col-lg-5 cm"  >
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Open Issues F
+                <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+              <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                  Add Issues</button>
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                    </div>
+                     </div>
+                     </div>
+      <div class="col-lg-5 cm">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              Service Remainders
+          </div>
+            <div class="panel-body">
+              <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+                  </div>
+                  </div>
+                  </div>
+              <div class="col-lg-5 cm">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+             <table id="status">
+            <tr>
+            <td><b style="font-size:14px;">Vehicle Details<b>
+            </td>
+            <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+            <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+            Edit</button>
+          </td>
+          </tr>
+          <tr>
+          <td>Name</td>
+          <td><b>BharatBenz 3123R</b></td>
+          </tr>
+          <tr>
+          <td>Group</td>
+          <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+          </tr>
+          <tr>
+          <td>Operator</td>
+          <td><b>Unassigned</b></td>
+          </tr>
+          <tr>
+          <td>Type</td>
+          <td><b>Truck</b></td>
+          </tr>
+          <tr>
+          <td>Status</td>
+          <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+          </tr>
+           <tr>
+          <td>VIN/SN</td>
+          <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+          </tr>
+          <tr>
+          <td>License Plate</td>
+          <td><b>KA24F1999</b></td>
+          </tr>
+          <tr>
+          <td>Year</td>
+          <td><b>2017</b></td>
+          </tr>
+          <tr>
+          <td>Make</td>
+          <td><b>BharatBenz<b/></td>
+          </tr>
+          <tr>
+          <td>Model</td>
+          <td><b>2017</b></td>
+          </tr>
+          <tr>
+          <td>Trim</td>
+          <td><b>XLE<b/></td>
+          </tr>
+          <tr>
+           <td>Registration<br>State/Province</td>
+           <td><b>KA</b></td>
+            </tr>
+             </table>
+                            </div>
+
+                  </div>
+              </div>
+              <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      Renewal Remainders
+                  </div>
+                    <div class="panel-body">
+                      <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                          </div>
+
+                </div>
+              </div>
+              <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      Critical Faults
+                  </div>
+                    <div class="panel-body">
+                      <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                          </div>
+                </div>
+              </div>
+              <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      Comments
+                      <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                    <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                        Add Comments</button>
+                  </div>
+                    <div class="panel-body">
+                      <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                          </div>
+                </div>
+
+              </div>
+                          </div><!--fuel log-->
+        <!--parts_usage--><div role="tabpanel" class="tab-pane fade in" id="parts_usage">
+        <div class="col-lg-5 cm"  >
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Open Issues P
+                  <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                    Add Issues</button>
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                      </div>
+                       </div>
+                       </div>
+        <div class="col-lg-5 cm">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Service Remainders
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+                    </div>
+                    </div>
+                    </div>
+                <div class="col-lg-5 cm">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+               <table id="status">
+              <tr>
+              <td><b style="font-size:14px;">Vehicle Details<b>
+              </td>
+              <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+              <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+              Edit</button>
+            </td>
+            </tr>
+            <tr>
+            <td>Name</td>
+            <td><b>BharatBenz 3123R</b></td>
+            </tr>
+            <tr>
+            <td>Group</td>
+            <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+            </tr>
+            <tr>
+            <td>Operator</td>
+            <td><b>Unassigned</b></td>
+            </tr>
+            <tr>
+            <td>Type</td>
+            <td><b>Truck</b></td>
+            </tr>
+            <tr>
+            <td>Status</td>
+            <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+            </tr>
+             <tr>
+            <td>VIN/SN</td>
+            <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+            </tr>
+            <tr>
+            <td>License Plate</td>
+            <td><b>KA24F1999</b></td>
+            </tr>
+            <tr>
+            <td>Year</td>
+            <td><b>2017</b></td>
+            </tr>
+            <tr>
+            <td>Make</td>
+            <td><b>BharatBenz<b/></td>
+            </tr>
+            <tr>
+            <td>Model</td>
+            <td><b>2017</b></td>
+            </tr>
+            <tr>
+            <td>Trim</td>
+            <td><b>XLE<b/></td>
+            </tr>
+            <tr>
+             <td>Registration<br>State/Province</td>
+             <td><b>KA</b></td>
+              </tr>
+               </table>
+                              </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-5 cm">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Renewal Remainders
+                    </div>
+                      <div class="panel-body">
+                        <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                            </div>
+
+                  </div>
+                </div>
+                <div class="col-lg-5 cm">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Critical Faults
+                    </div>
+                      <div class="panel-body">
+                        <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                            </div>
+                  </div>
+                </div>
+                <div class="col-lg-5 cm">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Comments
+                        <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                      <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                          Add Comments</button>
+                    </div>
+                      <div class="panel-body">
+                        <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                            </div>
+                  </div>
+
+                </div>
+                          </div><!--parts_usage-->
+    <!--Assig History-->  <div role="tabpanel" class="tab-pane fade in" id="assig_his">
+    <div class="col-lg-5 cm"  >
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              Open Issues Ass
+              <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+            <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                Add Issues</button>
+          </div>
+            <div class="panel-body">
+              <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                  </div>
+                   </div>
+                   </div>
+    <div class="col-lg-5 cm">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            Service Remainders
+        </div>
+          <div class="panel-body">
+            <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+                </div>
+                </div>
+                </div>
+            <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+           <table id="status">
+          <tr>
+          <td><b style="font-size:14px;">Vehicle Details<b>
+          </td>
+          <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+          <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+          Edit</button>
+        </td>
+        </tr>
+        <tr>
+        <td>Name</td>
+        <td><b>BharatBenz 3123R</b></td>
+        </tr>
+        <tr>
+        <td>Group</td>
+        <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+        </tr>
+        <tr>
+        <td>Operator</td>
+        <td><b>Unassigned</b></td>
+        </tr>
+        <tr>
+        <td>Type</td>
+        <td><b>Truck</b></td>
+        </tr>
+        <tr>
+        <td>Status</td>
+        <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+        </tr>
+         <tr>
+        <td>VIN/SN</td>
+        <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+        </tr>
+        <tr>
+        <td>License Plate</td>
+        <td><b>KA24F1999</b></td>
+        </tr>
+        <tr>
+        <td>Year</td>
+        <td><b>2017</b></td>
+        </tr>
+        <tr>
+        <td>Make</td>
+        <td><b>BharatBenz<b/></td>
+        </tr>
+        <tr>
+        <td>Model</td>
+        <td><b>2017</b></td>
+        </tr>
+        <tr>
+        <td>Trim</td>
+        <td><b>XLE<b/></td>
+        </tr>
+        <tr>
+         <td>Registration<br>State/Province</td>
+         <td><b>KA</b></td>
+          </tr>
+           </table>
+                          </div>
+
+                </div>
+            </div>
+            <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    Renewal Remainders
+                </div>
+                  <div class="panel-body">
+                    <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                        </div>
+
+              </div>
+            </div>
+            <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    Critical Faults
+                </div>
+                  <div class="panel-body">
+                    <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                        </div>
+              </div>
+            </div>
+            <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    Comments
+                    <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                  <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                      Add Comments</button>
+                </div>
+                  <div class="panel-body">
+                    <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                        </div>
+              </div>
+
+            </div>
+                          </div><!--Assig History-->
+      <!--Odometer History--><div role="tabpanel" class="tab-pane fade in" id="odo_his">
+      <div class="col-lg-5 cm"  >
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Open Issues Odo
+                <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+              <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                  Add Issues</button>
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                    </div>
+                     </div>
+                     </div>
+      <div class="col-lg-5 cm">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              Service Remainders
+          </div>
+            <div class="panel-body">
+              <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+                  </div>
+                  </div>
+                  </div>
+              <div class="col-lg-5 cm">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+             <table id="status">
+            <tr>
+            <td><b style="font-size:14px;">Vehicle Details<b>
+            </td>
+            <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+            <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+            Edit</button>
+          </td>
+          </tr>
+          <tr>
+          <td>Name</td>
+          <td><b>BharatBenz 3123R</b></td>
+          </tr>
+          <tr>
+          <td>Group</td>
+          <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+          </tr>
+          <tr>
+          <td>Operator</td>
+          <td><b>Unassigned</b></td>
+          </tr>
+          <tr>
+          <td>Type</td>
+          <td><b>Truck</b></td>
+          </tr>
+          <tr>
+          <td>Status</td>
+          <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+          </tr>
+           <tr>
+          <td>VIN/SN</td>
+          <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+          </tr>
+          <tr>
+          <td>License Plate</td>
+          <td><b>KA24F1999</b></td>
+          </tr>
+          <tr>
+          <td>Year</td>
+          <td><b>2017</b></td>
+          </tr>
+          <tr>
+          <td>Make</td>
+          <td><b>BharatBenz<b/></td>
+          </tr>
+          <tr>
+          <td>Model</td>
+          <td><b>2017</b></td>
+          </tr>
+          <tr>
+          <td>Trim</td>
+          <td><b>XLE<b/></td>
+          </tr>
+          <tr>
+           <td>Registration<br>State/Province</td>
+           <td><b>KA</b></td>
+            </tr>
+             </table>
+                            </div>
+
+                  </div>
+              </div>
+              <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      Renewal Remainders
+                  </div>
+                    <div class="panel-body">
+                      <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                          </div>
+
+                </div>
+              </div>
+              <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      Critical Faults
+                  </div>
+                    <div class="panel-body">
+                      <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                          </div>
+                </div>
+              </div>
+              <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      Comments
+                      <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                    <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                        Add Comments</button>
+                  </div>
+                    <div class="panel-body">
+                      <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                          </div>
+                </div>
+
+              </div>
+                          </div><!--Odometer History-->
+  <!--loc History-->      <div role="tabpanel" class="tab-pane fade in" id="loc_his">
+  <div class="col-lg-5 cm"  >
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            Open Issues Lo
+            <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+          <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+              Add Issues</button>
+        </div>
+          <div class="panel-body">
+            <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                </div>
+                 </div>
+                 </div>
+  <div class="col-lg-5 cm">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          Service Remainders
+      </div>
+        <div class="panel-body">
+          <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+              </div>
+              </div>
+              </div>
+          <div class="col-lg-5 cm">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+         <table id="status">
+        <tr>
+        <td><b style="font-size:14px;">Vehicle Details<b>
+        </td>
+        <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+        <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+        Edit</button>
+      </td>
+      </tr>
+      <tr>
+      <td>Name</td>
+      <td><b>BharatBenz 3123R</b></td>
+      </tr>
+      <tr>
+      <td>Group</td>
+      <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+      </tr>
+      <tr>
+      <td>Operator</td>
+      <td><b>Unassigned</b></td>
+      </tr>
+      <tr>
+      <td>Type</td>
+      <td><b>Truck</b></td>
+      </tr>
+      <tr>
+      <td>Status</td>
+      <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+      </tr>
+       <tr>
+      <td>VIN/SN</td>
+      <td><b>WD3PVKXB</b><a href="#" style="float:right;">Decode VIN</a></td>
+      </tr>
+      <tr>
+      <td>License Plate</td>
+      <td><b>KA24F1999</b></td>
+      </tr>
+      <tr>
+      <td>Year</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Make</td>
+      <td><b>BharatBenz<b/></td>
+      </tr>
+      <tr>
+      <td>Model</td>
+      <td><b>2017</b></td>
+      </tr>
+      <tr>
+      <td>Trim</td>
+      <td><b>XLE<b/></td>
+      </tr>
+      <tr>
+       <td>Registration<br>State/Province</td>
+       <td><b>KA</b></td>
+        </tr>
+         </table>
+                        </div>
+
+              </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Renewal Remainders
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                      </div>
+
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Critical Faults
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                      </div>
+            </div>
+          </div>
+          <div class="col-lg-5 cm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  Comments
+                  <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                    Add Comments</button>
+              </div>
+                <div class="panel-body">
+                  <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                      </div>
+            </div>
+
+          </div>
+                          </div><!--loc History-->
+      <!--settings-->     <div role="tabpanel" class="tab-pane fade in" id="settings">
+      <div class="col-lg-5 cm"  >
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                Open Issues
+                <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+              <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+                  Add Issues</button>
+            </div>
+              <div class="panel-body">
+                <center><label style="padding:2px;color:#afafaf">No Open Issues</label></center>
+                    </div>
+                     </div>
+                     </div>
+      <div class="col-lg-5 cm">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              Service Remainders
+          </div>
+            <div class="panel-body">
+              <center><label style="padding:2px;color:#afafaf">No Open Service Remainders</label></center>
+                  </div>
+                  </div>
+                  </div>
+              <div class="col-lg-5 cm">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+             <table id="status">
+            <tr>
+            <td><b style="font-size:14px;">Vehicle Details<b>
+            </td>
+            <td><button style="float:right;" type="button" class="btn btn-primary btn-xs">
+            <i class="fa fa-pencil" aria-hidden="true" style="color:white"></i>&nbsp;&nbsp;
+            Edit</button>
+          </td>
+          </tr>
+          <tr>
+          <td>Name</td>
+          <td><b>BharatBenz 3123R</b></td>
+          </tr>
+          <tr>
+          <td>Group</td>
+          <td><b>No Set</b> <a href="#" style="float:right;">History</a></td>
+          </tr>
+          <tr>
+          <td>Operator</td>
+          <td><b>Unassigned</b></td>
+          </tr>
+          <tr>
+          <td>Type</td>
+          <td><b>Truck</b></td>
+          </tr>
+          <tr>
+          <td>Status</td>
+          <td><b style="color:#00cc00;">Active</b><a href="#" style="float:right;">History</a></td>
+          </tr>
+           <tr>
+          <td>VIN/SN</td>
+          <td><b>WD3PVKXB2R7Z69ZLS</b>&nbsp;&nbsp;<a href="#" style="float:right;">Decode VIN</a></td>
+          </tr>
+          <tr>
+          <td>License Plate</td>
+          <td><b>KA24F1999</b></td>
+          </tr>
+          <tr>
+          <td>Year</td>
+          <td><b>2017</b></td>
+          </tr>
+          <tr>
+          <td>Make</td>
+          <td><b>BharatBenz<b/></td>
+          </tr>
+          <tr>
+          <td>Model</td>
+          <td><b>2017</b></td>
+          </tr>
+          <tr>
+          <td>Trim</td>
+          <td><b>XLE<b/></td>
+          </tr>
+          <tr>
+           <td>Registration<br>State/Province</td>
+           <td><b>KA</b></td>
+            </tr>
+             </table>
+                            </div>
+
+                  </div>
+              </div>
+              <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      Renewal Remainders
+                  </div>
+                    <div class="panel-body">
+                      <center><label style="padding:2px;color:#afafaf" >No Open Renewal Remainders</label></center>
+                          </div>
+
+                </div>
+              </div>
+              <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      Critical Faults
+                  </div>
+                    <div class="panel-body">
+                      <center><label style="padding:2px;color:#afafaf">No Open Critical Faults</label></center>
+                          </div>
+                </div>
+              </div>
+              <div class="col-lg-5 cm">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                      Comments
+                      <button style="float:right;" type="button" class="btn btn-primary btn-xs">
+                    <i class="fa fa-plus" aria-hidden="true" style="color:white"></i>&nbsp;
+                        Add Comments</button>
+                  </div>
+                    <div class="panel-body">
+                      <center><label style="padding:2px;color:#afafaf">No Open Comments</label></center>
+                          </div>
+                </div>
+
+              </div>
+                          </div><!--settings-->
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    </div>
+    <!-- /#wrapper -->
+
+<script>
+
+</script>
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

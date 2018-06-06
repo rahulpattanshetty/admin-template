@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <title>Driver</title>
+
+<style>
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+   background: #f9f9f9;
+   font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+   background:#efefef;
+   padding:10px;
+   position:fixed;
+   width: 100%;
+}
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:fixed;
+   bottom:0;
+   width:100%;
+   height:48px;   /* Height of the footer */
+   background:#ddd;
+}
+
+#container {
+   height:100%;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.alignleft_l{
+  float: left;
+  padding: 13px;
+
+}
+.alignright_l{
+  float: right;
+    padding: 13px;
+  }
+.fa{
+  font-size:25px;
+}
+.f_d{
+  padding-top: 13px;
+}
+
+</style>
+</head>
+<body>
+
+
+  <div id="container">
+     <div id="header">
+       <div id="mySidenav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="#">About</a>
+         <a href="#">Services</a>
+         <a href="#">Clients</a>
+         <a href="#">Contact</a>
+       </div>
+       <span style="font-size:20px;cursor:pointer;color:#504f4f;" onclick="openNav()">&#9776;&nbsp;Fueblabs</span>
+     </div><br><br><br>
+     <div id="body" scrolling="yes"><!--body-->
+       <img  src="https://www.ontabee.com/images/screen15.jpg" height="550" width="400" />
+
+</div>
+</div><!--/.body-->
+
+     <div id="footer">
+
+    <span class="alignleft_l"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+<span class="alignright_l"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+<center><span><i class="fa fa-home f_d" aria-hidden="true"></i></span></center>
+
+
+  </div>
+  </div>
+  <script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+
+</body>
+
+</html>

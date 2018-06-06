@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <style>
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+  }
+
+  .switch input {display:none;}
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ca2222;
+    -webkit-transition: .4s;
+    transition: .4s;
+     border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #2ab934;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(55px);
+  }
+
+  /*------ ADDED CSS ---------*/
+  .slider:after
+  {
+   content:'OFF';
+   color: white;
+   display: block;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   top: 50%;
+   left: 50%;
+   font-size: 10px;
+   font-family: Verdana, sans-serif;
+  }
+
+  input:checked + .slider:after
+  {
+    content:'ON';
+  }
+
+   .control-label{
+     font-size: 12px;
+   }
+  .nav-tabs-dropdown {
+    display: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .nav-tabs-dropdown:before {
+    content: "\e114";
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    right: 30px;
+  }
+
+  @media screen and (min-width: 769px) {
+    #nav-tabs-wrapper {
+      display: block!important;
+    }
+  }
+  @media screen and (max-width: 768px) {
+      .nav-tabs-dropdown {
+          display: block;
+      }
+      #nav-tabs-wrapper {
+          display: none;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          text-align: center;
+      }
+     .nav-tabs-horizontal {
+          min-height: 20px;
+          padding: 19px;
+          margin-bottom: 20px;
+          background-color: #f5f5f5;
+          border: 1px solid #e3e3e3;
+          border-radius: 4px;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+     }
+      .nav-tabs-horizontal  > li {
+          float: none;
+      }
+      .nav-tabs-horizontal  > li + li {
+          margin-left: 2px;
+      }
+      .nav-tabs-horizontal > li,
+      .nav-tabs-horizontal > li > a {
+          background: transparent;
+          width: 100%;
+      }
+      .nav-tabs-horizontal  > li > a {
+          border-radius: 4px;
+      }
+      .nav-tabs-horizontal  > li.active > a,
+      .nav-tabs-horizontal  > li.active > a:hover,
+      .nav-tabs-horizontal  > li.active > a:focus {
+          color: #ffffff;
+          background-color: #428bca;
+      }
+  }
+  .na>li>a{
+        padding: 2px 2px;
+
+  }
+  .well {
+    padding:12px;
+  }
+
+  .nav1>li>a{
+    padding: 8px 15px;
+  }
+  </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Fueblabs</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav nav1" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i>Work Order<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-check-circle"></i> Inspection<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-exclamation-circle fa-fw"></i>Issues<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bell fa-fw"></i>Remainders<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i>Service<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-tint fa-fw"></i>Fuel<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-car fa-fw"></i>Vehicles<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-th-large fa-fw"></i>Parts & Inventory<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text fa-fw"></i>Reports<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class=" fa fa-cog fa-fw"></i> Settings</a>
+                        </li>
+
+
+
+
+
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="page-header">Vehicle List / New Vehicle</h4>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary">Tabs</a>
+            <ul id="nav-tabs-wrapper" class="na nav nav-tabs nav-pills nav-stacked well">
+              <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
+              <li><a href="#spec" data-toggle="tab">Specification</a></li>
+              <li><a href="#et" data-toggle="tab">Engine & Transmission</a></li>
+              <li><a href="#wt" data-toggle="tab">Wheels & Tires</a></li>
+              <li><a href="#fluids" data-toggle="tab">Fluids</a></li>
+                <li><a href="#settings" data-toggle="tab">Settings</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="details">
+                  <!-- /details -->
+                  <div class="row">
+                      <div class="col-lg-10">
+                          <div class="panel panel-default">
+                              <div class="panel-heading">
+                                  Details<p style="float:right;"><a href="#">Cancel</a></p>
+                              </div>
+
+                              <div class="panel-body">
+                                  <div class="row">
+
+                                      <div class="col-lg-12">
+                                        <p><b>Identification</b></p>
+                                        <form class="form-horizontal ">
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput-modal-markup">Vehicle Name*</label>
+                                            <div class="col-sm-8">
+                                              <input type="text" id="textInput-modal-markup" class="form-control"></div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput-modal-markup">VIN/SN</label>
+                                            <div class="col-sm-8">
+                                              <input type="text" id="textInput-modal-markup" class="form-control"></div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput-modal-markup">License Plate</label>
+                                            <div class="col-sm-8">
+                                              <input type="text" id="textInput-modal-markup" class="form-control">
+
+                                            </div>
+                                          </div>
+
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput2-modal-markup">Type</label>
+
+                                              <div class="col-sm-8">
+                                                <select name=user_type  class="form-control" >
+                                                 <option value=af>Manager</option>
+                                                 <option value=ax>Driver</option>
+                                                 <option value=ax>Supervisor</option>
+                                                 <option value=ax>Inventory Manager</option>
+                                                 <option value=ax>Purchase Manager</option>
+                                                 <option value=gs>Maintenance Manager</option>
+
+                                                </select>
+                                                  <p class="help-block">categorize this Vehicle</p>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput3-modal-markup">Year</label>
+                                            <div class="col-sm-8">
+                                              <input type="text" id="textInput3-modal-markup" class="form-control">
+                                               <p class="help-block"> e.g. 1999,2012, etc</p>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput2-modal-markup">Make</label>
+
+                                              <div class="col-sm-8">
+                                                <select name=user_type  class="form-control" >
+                                                 <option value=af>Manager</option>
+                                                 <option value=ax>Driver</option>
+                                                 <option value=ax>Supervisor</option>
+                                                 <option value=ax>Inventory Manager</option>
+                                                 <option value=ax>Purchase Manager</option>
+                                                 <option value=gs>Maintenance Manager</option>
+
+                                                </select>
+                                                  <p class="help-block">e.g. TOYOTO. GMC, etc</p>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput3-modal-markup">Model</label>
+                                            <div class="col-sm-8">
+                                              <select name=user_type  class="form-control" >
+                                               <option value=af>Manager</option>
+                                               <option value=ax>Driver</option>
+                                               <option value=ax>Supervisor</option>
+                                               <option value=ax>Inventory Manager</option>
+                                               <option value=ax>Purchase Manager</option>
+                                               <option value=gs>Maintenance Manager</option>
+
+                                              </select>
+                                              <p class="help-block">e.g. 4Runner,yukon, etc</p>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput3-modal-markup">Trim</label>
+                                            <div class="col-sm-8">
+                                              <input type="text" id="textInput3-modal-markup" class="form-control">
+                                                 <p class="help-block">e.g. SE, LE, XLE, etc</p>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput3-modal-markup">Registration State/Province</label>
+                                            <div class="col-sm-8">
+                                              <input type="text" id="textInput3-modal-markup" class="form-control">
+
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textInput3-modal-markup">Photo</label>
+                                            <div class="col-sm-8">
+                                              <button type="button" class="btn btn-primary btn-xs" >
+                                                Pick File</button>
+
+                                            </div>
+                                          </div>
+                                          <br>
+                                           <p><b>Classification</b></p>
+                                           <div class="form-group">
+                                             <label class="col-sm-2 control-label" for="textInput3-modal-markup">Status*</label>
+                                             <div class="col-sm-8">
+                                               <select name=user_type  class="form-control" >
+                                                <option value=af>Manager</option>
+                                                <option value=ax>Driver</option>
+                                                <option value=ax>Supervisor</option>
+                                                <option value=ax>Inventory Manager</option>
+                                                <option value=ax>Purchase Manager</option>
+                                                <option value=gs>Maintenance Manager</option>
+
+                                               </select>
+                                               <p class="help-block">current status of this vehicle</p>
+                                             </div>
+                                           </div>
+                                           <div class="form-group">
+                                             <label class="col-sm-2 control-label" for="textInput3-modal-markup">Group</label>
+                                             <div class="col-sm-8">
+                                               <select name=user_type  class="form-control" >
+                                                <option value=af>Manager</option>
+                                                <option value=ax>Driver</option>
+                                                <option value=ax>Supervisor</option>
+                                                <option value=ax>Inventory Manager</option>
+                                                <option value=ax>Purchase Manager</option>
+                                                <option value=gs>Maintenance Manager</option>
+
+                                               </select>
+                                               <p class="help-block">vehicle group</p>
+                                             </div>
+                                           </div>
+                                           <div class="form-group">
+                                             <label class="col-sm-2 control-label" for="textInput3-modal-markup">Ownership*</label>
+                                             <div class="col-sm-8">
+                                               <select name=user_type  class="form-control" >
+                                                <option value=af>Manager</option>
+                                                <option value=ax>Driver</option>
+                                                <option value=ax>Supervisor</option>
+                                                <option value=ax>Inventory Manager</option>
+                                                <option value=ax>Purchase Manager</option>
+                                                <option value=gs>Maintenance Manager</option>
+
+                                               </select>
+                                               <p class="help-block">e.g. 4Runner,yukon, etc</p>
+                                             </div>
+                                           </div>
+                                           <p><b>Additional Details</b></p>
+                                           <div class="form-group">
+                                             <label class="col-sm-2 control-label" for="textInput-modal-markup">Color</label>
+                                             <div class="col-sm-8">
+                                               <input type="text" id="textInput-modal-markup" class="form-control"></div>
+                                           </div>
+                                           <div class="form-group">
+                                             <label class="col-sm-2 control-label" for="textInput3-modal-markup">Body Type</label>
+                                             <div class="col-sm-8">
+                                               <select name=user_type  class="form-control" >
+                                                <option value=af>Manager</option>
+                                                <option value=ax>Driver</option>
+                                                <option value=ax>Supervisor</option>
+                                                <option value=ax>Inventory Manager</option>
+                                                <option value=ax>Purchase Manager</option>
+                                                <option value=gs>Maintenance Manager</option>
+
+                                               </select>
+                                               <p class="help-block">Body type (convertivle, couple, pickup, sedan, etc)</p>
+                                             </div>
+                                           </div>
+                                           <div class="form-group">
+                                             <label class="col-sm-2 control-label" for="textInput3-modal-markup">Body Subtype</label>
+                                             <div class="col-sm-8">
+                                               <select name=user_type  class="form-control" >
+                                                <option value=af>Manager</option>
+                                                <option value=ax>Driver</option>
+                                                <option value=ax>Supervisor</option>
+                                                <option value=ax>Inventory Manager</option>
+                                                <option value=ax>Purchase Manager</option>
+                                                <option value=gs>Maintenance Manager</option>
+
+                                               </select>
+                                               <p class="help-block">Body subtype (extented cab, crew cab,etc)</p>
+                                             </div>
+                                           </div>
+                                               <div class="form-group">
+                                                 <label class="col-sm-2 control-label" for="textInput-modal-markup">MSRP</label>
+                                                 <div class="col-sm-8">
+                                                   <input type="text" id="textInput-modal-markup" class="form-control">
+                                                     <p class="help-block">Manufactures suggested retail price</p>
+                                                 </div>
+                                               </div>
+
+                                           <div class="form-group">
+                                             <label class="col-sm-2 control-label" for="textInput-modal-markup">Linked Vehicles</label>
+                                             <div class="col-sm-8">
+                                               <input type="text" id="textInput-modal-markup" class="form-control"></div>
+                                           </div>
+                                           <hr>
+
+                                           <p style="float:right;">
+
+                                           <button  type="button" class="btn btn-default">Save & Add Another</button>
+                                            <button type="button" class="btn btn-primary">Save</button>
+                                             </p>
+                                        </form>
+                                      </div>
+
+                                  </div>
+                                  <!-- /.row (nested) -->
+                              </div>
+                              <!-- /.panel-body -->
+                          </div>
+                          <!-- /.panel -->
+                      </div>
+                      <!-- /.col-lg-12 -->
+                  </div>
+                  <!-- /details -->
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="spec">
+                  <!--specification---->
+                             <!-- /.row -->
+                             <div class="row">
+                                 <div class="col-lg-10">
+                                     <div class="panel panel-default">
+                                         <div class="panel-heading">
+                                             Specification<p style="float:right;"><a href="#">Cancel</a></p>
+                                         </div>
+
+                                         <div class="panel-body">
+                                             <div class="row">
+
+                                                 <div class="col-lg-12">
+                                                   <p><b>Dimensions</b></p>
+                                                   <form class="form-horizontal ">
+                                                     <div class="row sp">
+                                                      <div class="col-sm-3 ">
+                                                        <label class=" control-label" for="textInput-modal-markup">
+                                                        Width&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                       <div class=" input-group">
+
+                                                           <input type="text" class="form-control">
+                                                           <span class="input-group-addon">in</span>
+                                                       </div>
+                                                     </div>
+
+                                                     <div class="col-sm-3 ">
+                                                       <label class=" control-label" for="textInput-modal-markup">
+                                                    Height&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                      <div class=" input-group">
+
+                                                          <input type="text" class="form-control">
+                                                          <span class="input-group-addon">in</span>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                      <label class=" control-label" for="textInput-modal-markup">
+                                                      Length&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                     <div class=" input-group">
+
+                                                         <input type="text" class="form-control">
+                                                         <span class="input-group-addon">in</span>
+                                                     </div>
+                                                   </div>
+                                                   <div class="col-sm-3 ">
+                                                     <label class=" control-label" for="textInput-modal-markup">
+                                                    Interior Volume&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                    <div class=" input-group">
+
+                                                        <input type="text" class="form-control">
+                                                        <span class="input-group-addon">ft3</span>
+                                                    </div>
+                                                  </div>
+
+                                             </div>
+                                            <br>
+                                            <p><b>Weight</b></p>
+                                             <div class="row sp">
+                                              <div class="col-sm-4">
+                                                <label class=" control-label" for="textInput-modal-markup">
+                                                Curb weight&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                               <div class=" input-group">
+
+                                                   <input type="text" class="form-control">
+                                                   <span class="input-group-addon">lb</span>
+                                               </div>
+                                             </div>
+
+                                             <div class="col-sm-4">
+                                               <label class=" control-label" for="textInput-modal-markup">
+                                              Gross Vehicle weight rating&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                              <div class=" input-group">
+
+                                                  <input type="text" class="form-control">
+                                                  <span class="input-group-addon">lb</span>
+                                              </div>
+                                            </div>
+
+
+                                     </div>
+                                     <br>
+                                     <p><b>Performance</b></p>
+                                      <div class="row sp">
+                                       <div class="col-sm-4">
+                                         <label class=" control-label" for="textInput-modal-markup">
+                                          Towing Capacity&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                        <div class=" input-group">
+
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon">lb</span>
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-4">
+                                        <label class=" control-label" for="textInput-modal-markup">
+                                          Max Payload&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                       <div class=" input-group">
+
+                                           <input type="text" class="form-control">
+                                           <span class="input-group-addon">lb</span>
+                                       </div>
+                                     </div>
+                              </div>
+
+                              <br>
+                              <p><b>Fuel Economy</b></p>
+                               <div class="row sp">
+                                <div class="col-sm-4">
+                                  <label class=" control-label" for="textInput-modal-markup">EPA city</label>
+                                   <input type="text" id="textInput-modal-markup" class="form-control">
+                               </div>
+                               <div class="col-sm-4">
+                                 <label class=" control-label" for="textInput-modal-markup">EPA Highway</label>
+                                    <input type="text" id="textInput-modal-markup" class="form-control">
+                              </div>
+                              <div class="col-sm-4">
+                                <label class=" control-label" for="textInput-modal-markup">EPA Combined</label>
+                                   <input type="text" id="textInput-modal-markup" class="form-control">
+                             </div>
+                       </div>
+
+                                                      <hr>
+                                                      <p style="float:right;">
+
+                                                      <button  type="button" class="btn btn-default">Save & Add Another</button>
+                                                       <button type="button" class="btn btn-primary">Save</button>
+                                                        </p>
+                                                   </form>
+                                                 </div>
+
+                                             </div>
+                                             <!-- /.row (nested) -->
+                                         </div>
+                                         <!-- /.panel-body -->
+                                     </div>
+                                     <!-- /.panel -->
+                                 </div>
+                                 <!-- /.col-lg-12 -->
+                             </div>
+                             <!-- /.row -->
+
+                  <!--specification-->
+
+                      </div>
+                <div role="tabpanel" class="tab-pane fade in" id="et">
+                  <!--engine & transmission-->
+
+                             <!-- /.row -->
+                             <div class="row">
+                                 <div class="col-lg-10">
+                                     <div class="panel panel-default">
+                                         <div class="panel-heading">
+                                             Engine & Transmission<p style="float:right;"><a href="#">Cancel</a></p>
+                                         </div>
+
+                                         <div class="panel-body">
+                                             <div class="row">
+
+                                                 <div class="col-lg-12">
+                                                   <p><b>Engine</b></p>
+                                                   <form class="form-horizontal ">
+                                                     <div class="row sp">
+                                                      <div class="col-sm-4 ">
+                                                        <label class=" control-label" for="textInput-modal-markup">
+                                                        Engine Summary&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                    <input type="text" id="" class="form-control">
+                                                       </div>
+
+
+                                                     <div class="col-sm-4 ">
+                                                       <label class=" control-label" for="textInput-modal-markup">
+                                                    Engine Brand&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                      <input type="text" id="" class="form-control">
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                      <label class=" control-label" for="textInput-modal-markup">
+                                                      Aspiration&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                      <select name=user_type  class="form-control" >
+                                                       <option value=af>Manager</option>
+                                                       <option value=ax>Driver</option>
+                                                       <option value=ax>Supervisor</option>
+                                                       <option value=ax>Inventory Manager</option>
+                                                       <option value=ax>Purchase Manager</option>
+                                                       <option value=gs>Maintenance Manager</option>
+
+                                                      </select>
+                                                   </div>
+
+                                             </div>
+                                             <br>
+                                             <div class="row sp">
+                                              <div class="col-sm-4">
+                                                <label class=" control-label" for="textInput-modal-markup">
+                                                Block Type&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                <select name=user_type  class="form-control" >
+                                                 <option value=af>Manager</option>
+                                                 <option value=ax>Driver</option>
+                                                 <option value=ax>Supervisor</option>
+                                                 <option value=ax>Inventory Manager</option>
+                                                 <option value=ax>Purchase Manager</option>
+                                                 <option value=gs>Maintenance Manager</option>
+
+                                                </select>
+                                               </div>
+
+
+                                             <div class="col-sm-4">
+                                               <label class=" control-label" for="textInput-modal-markup">
+                                            Bose&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                            <div class=" input-group">
+
+                                                <input type="text" class="form-control">
+                                                <span class="input-group-addon">in</span></div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                              <label class=" control-label" for="textInput-modal-markup">
+                                              Cam Type&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                              <select name=user_type  class="form-control" >
+                                               <option value=af>Manager</option>
+                                               <option value=ax>Driver</option>
+                                               <option value=ax>Supervisor</option>
+                                               <option value=ax>Inventory Manager</option>
+                                               <option value=ax>Purchase Manager</option>
+                                               <option value=gs>Maintenance Manager</option>
+
+                                              </select>
+                                           </div>
+
+                                     </div>
+                                     <br>
+                                     <div class="row sp">
+                                      <div class="col-sm-4">
+                                        <label class=" control-label" for="textInput-modal-markup">
+                                        Compression&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                        <input type="text" id="" class="form-control">
+                                       </div>
+
+
+                                     <div class="col-sm-4">
+                                       <label class=" control-label" for="textInput-modal-markup">
+                                    Cylinders&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                      <input type="text" id="" class="form-control">
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <label class=" control-label" for="textInput-modal-markup">
+                                      Displacement&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                      <input type="text" id="" class="form-control">
+                                   </div>
+
+                             </div>
+                             <br>
+                             <div class="row sp">
+                              <div class="col-sm-4">
+                                <label class=" control-label" for="textInput-modal-markup">
+                                Fuel Induction&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                <select name=user_type  class="form-control" >
+                                 <option value=af>Manager</option>
+                                 <option value=ax>Driver</option>
+                                 <option value=ax>Supervisor</option>
+                                 <option value=ax>Inventory Manager</option>
+                                 <option value=ax>Purchase Manager</option>
+                                 <option value=gs>Maintenance Manager</option>
+
+                                </select>
+                               </div>
+
+
+                             <div class="col-sm-4">
+                               <label class=" control-label" for="textInput-modal-markup">
+                            Fuel Quality&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                              <input type="text" id="" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                              <label class=" control-label" for="textInput-modal-markup">
+                              Max HP&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                              <input type="text" id="" class="form-control">
+                           </div>
+
+                     </div>
+                                     <br>
+                                     <div class="row sp">
+                                      <div class="col-sm-4">
+                                        <label class=" control-label" for="textInput-modal-markup">
+                                        Max Torque&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                        <input type="text" id="" class="form-control">
+                                       </div>
+
+
+                                     <div class="col-sm-4">
+                                       <label class=" control-label" for="textInput-modal-markup">
+                                    Redline RPM&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                      <input type="text" id="" class="form-control">
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <label class=" control-label" for="textInput-modal-markup">
+                                      Stroke&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                      <input type="text" id="" class="form-control">
+                                   </div>
+
+                             </div>
+                             <br>
+                             <div class="row sp">
+                              <div class="col-sm-4">
+                                <label class=" control-label" for="textInput-modal-markup">
+                                Valves&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                <input type="text" id="" class="form-control">
+                               </div>
+
+
+                     </div>
+                     <br>
+                                     <p><b>Transmission</b></p>
+                                      <div class="row sp">
+                                       <div class="col-sm-4">
+                                         <label class=" control-label" for="textInput-modal-markup">
+                                          Transmission Summary&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                          <input type="text" id="" class="form-control">
+                                      </div>
+                                      <div class="col-sm-4">
+                                        <label class=" control-label" for="textInput-modal-markup">
+                                          Transmission Brand&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                      <input type="text" id="" class="form-control">
+                                     </div>
+                                     <div class="col-sm-4">
+                                       <label class=" control-label" for="textInput-modal-markup">
+                                         Transmission Type&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                     <input type="text" id="" class="form-control">
+                                    </div>
+                              </div>
+                              <br>
+                              <div class="row sp">
+                               <div class="col-sm-4">
+                                 <label class=" control-label" for="textInput-modal-markup">
+                                  Transmission Gears&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                  <input type="text" id="" class="form-control">
+                              </div>
+
+
+                      </div>
+
+
+                                                      <hr>
+                                                      <p style="float:right;">
+
+                                                      <button  type="button" class="btn btn-default">Save & Add Another</button>
+                                                       <button type="button" class="btn btn-primary">Save</button>
+                                                        </p>
+                                                   </form>
+                                                 </div>
+
+                                             </div>
+                                             <!-- /.row (nested) -->
+                                         </div>
+                                         <!-- /.panel-body -->
+                                     </div>
+                                     <!-- /.panel -->
+                                 </div>
+                                 <!-- /.col-lg-12 -->
+                             </div>
+                             <!-- /.row -->
+                  <!-- engine & transmission-->
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade in" id="wt">
+                      <!-- Wheels & tires-->
+                                 <!-- /.row -->
+                                 <div class="row">
+                                     <div class="col-lg-10">
+                                         <div class="panel panel-default">
+                                             <div class="panel-heading">
+                                                 Wheels & Tires<p style="float:right;"><a href="#">Cancel</a></p>
+                                             </div>
+
+                                             <div class="panel-body">
+                                                 <div class="row">
+
+                                                     <div class="col-lg-12">
+                                                       <p><b>Wheels & Tires</b></p>
+                                                       <form class="form-horizontal ">
+                                                         <div class="row sp">
+                                                          <div class="col-sm-4">
+                                                            <label class=" control-label" for="textInput-modal-markup">
+                                                            Driver Type&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                            <select name=user_type  class="form-control" >
+                                                             <option value=af>Manager</option>
+                                                             <option value=ax>Driver</option>
+                                                             <option value=ax>Supervisor</option>
+                                                             <option value=ax>Inventory Manager</option>
+                                                             <option value=ax>Purchase Manager</option>
+                                                             <option value=gs>Maintenance Manager</option>
+
+                                                            </select>
+                                                           </div>
+
+
+                                                         <div class="col-sm-4 ">
+                                                           <label class=" control-label" for="textInput-modal-markup">
+                                                        Brake System&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                        <select name=user_type  class="form-control" >
+                                                         <option value=af>Manager</option>
+                                                         <option value=ax>Driver</option>
+                                                         <option value=ax>Supervisor</option>
+                                                         <option value=ax>Inventory Manager</option>
+                                                         <option value=ax>Purchase Manager</option>
+                                                         <option value=gs>Maintenance Manager</option>
+
+                                                        </select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                          <label class=" control-label" for="textInput-modal-markup">
+                                                          Front track width&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                          <select name=user_type  class="form-control" >
+                                                           <option value=af>Manager</option>
+                                                           <option value=ax>Driver</option>
+                                                           <option value=ax>Supervisor</option>
+                                                           <option value=ax>Inventory Manager</option>
+                                                           <option value=ax>Purchase Manager</option>
+                                                           <option value=gs>Maintenance Manager</option>
+
+                                                          </select>
+                                                       </div>
+
+                                                 </div>
+                                                 <br>
+                                                 <div class="row sp">
+                                                  <div class="col-sm-4">
+                                                    <label class=" control-label" for="textInput-modal-markup">
+                                                    Rear track width&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                      <input type="text" id="" class="form-control">
+                                                   </div>
+
+
+                                                 <div class="col-sm-4">
+                                                   <label class=" control-label" for="textInput-modal-markup">
+                                                Wheel base&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                <div class=" input-group">
+
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon">in</span></div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                  <label class=" control-label" for="textInput-modal-markup">
+                                                  Front wheel diameter&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                    <input type="text" id="" class="form-control">
+                                               </div>
+
+                                         </div>
+                                         <br>
+                                         <div class="row sp">
+                                          <div class="col-sm-4">
+                                            <label class=" control-label" for="textInput-modal-markup">
+                                            Rear wheel diameter&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                            <input type="text" id="" class="form-control">
+                                           </div>
+
+
+                                         <div class="col-sm-4">
+                                           <label class=" control-label" for="textInput-modal-markup">
+                                        Rear Axle&nbsp;</label>
+                                          <input type="text" id="" class="form-control">
+                                        </div>
+                                        <div class="col-sm-4">
+                                          <label class=" control-label" for="textInput-modal-markup">
+                                          Front Tire Type&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                          <input type="text" id="" class="form-control">
+                                       </div>
+
+                                 </div>
+                                 <br>
+                                 <div class="row sp">
+                                  <div class="col-sm-4">
+                                    <label class=" control-label" for="textInput-modal-markup">
+                                    Fuel tire PSI&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                    <input type="text" id="" class="form-control">
+                                   </div>
+
+
+                                 <div class="col-sm-4">
+                                   <label class=" control-label" for="textInput-modal-markup">
+                                Rear Tire Type&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                  <input type="text" id="" class="form-control">
+                                </div>
+                                <div class="col-sm-4">
+                                  <label class=" control-label" for="textInput-modal-markup">
+                                  Rear Tire PSI&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                  <input type="text" id="" class="form-control">
+                               </div>
+
+                         </div>
+                                         <br>
+
+                                                          <hr>
+                                                          <p style="float:right;">
+
+                                                          <button  type="button" class="btn btn-default">Save & Add Another</button>
+                                                           <button type="button" class="btn btn-primary">Save</button>
+                                                            </p>
+                                                       </form>
+                                                     </div>
+
+                                                 </div>
+                                                 <!-- /.row (nested) -->
+                                             </div>
+                                             <!-- /.panel-body -->
+                                         </div>
+                                         <!-- /.panel -->
+                                     </div>
+                                     <!-- /.col-lg-12 -->
+                                 </div>
+                                 <!-- /.row -->
+                      <!-- Wheels & tires-->
+
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade in" id="fluids">
+                          <!-- fluids-->
+                                     <!-- /.row -->
+                                     <div class="row">
+                                         <div class="col-lg-10">
+                                             <div class="panel panel-default">
+                                                 <div class="panel-heading">
+                                                     Fluids<p style="float:right;"><a href="#">Cancel</a></p>
+                                                 </div>
+
+                                                 <div class="panel-body">
+                                                     <div class="row">
+
+                                                         <div class="col-lg-12">
+                                                           <p><b>Fuel</b></p>
+                                                           <form class="form-horizontal ">
+                                                             <div class="row sp">
+                                                              <div class="col-sm-6">
+                                                                <label class=" control-label" for="textInput-modal-markup">
+                                                                Fuel Type&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                                <select name=user_type  class="form-control" >
+                                                                 <option value=af>Manager</option>
+                                                                 <option value=ax>Driver</option>
+                                                                 <option value=ax>Supervisor</option>
+                                                                 <option value=ax>Inventory Manager</option>
+                                                                 <option value=ax>Purchase Manager</option>
+                                                                 <option value=gs>Maintenance Manager</option>
+
+                                                                </select>
+                                                               </div>
+
+
+                                                             <div class="col-sm-6">
+                                                               <label class=" control-label" for="textInput-modal-markup">
+                                                            Fuel Quantity&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                          <input type="text" id="" class="form-control">
+                                                            </div>
+
+
+                                                     </div>
+                                                     <br>
+                                                     <div class="row sp">
+                                                      <div class="col-sm-6">
+                                                        <label class=" control-label" for="textInput-modal-markup">
+                                                        Fuel Tank1 Capacity&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                        <div class=" input-group">
+
+                                                            <input type="text" class="form-control">
+                                                            <span class="input-group-addon">Gallons(US)</span></div>
+                                                       </div>
+
+
+                                                     <div class="col-sm-6">
+                                                       <label class=" control-label" for="textInput-modal-markup">
+                                                    Fuel Tank2 Capacity&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                                    <div class=" input-group">
+
+                                                        <input type="text" class="form-control">
+                                                        <span class="input-group-addon">Gallons(US)</span></div>
+                                                    </div>
+
+
+                                             </div><br>
+                                      <p><b>Oil</b></p>
+                                     <div class="row sp">
+                                      <div class="col-sm-6">
+                                        <label class=" control-label" for="textInput-modal-markup">
+                                        Oil Capacity&nbsp;<i class="fa fa-info-circle" aria-hidden="true"></i></label>
+                                        <input type="text" id="" class="form-control">
+                                       </div>
+
+                             </div>
+                                             <br>
+
+                                                              <hr>
+                                                              <p style="float:right;">
+
+                                                              <button  type="button" class="btn btn-default">Save & Add Another</button>
+                                                               <button type="button" class="btn btn-primary">Save</button>
+                                                                </p>
+                                                           </form>
+                                                         </div>
+
+                                                     </div>
+                                                     <!-- /.row (nested) -->
+                                                 </div>
+                                                 <!-- /.panel-body -->
+                                             </div>
+                                             <!-- /.panel -->
+                                         </div>
+                                         <!-- /.col-lg-12 -->
+                                     </div>
+                                     <!-- /.row -->
+                          <!-- fluids-->
+
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade in" id="settings">
+                              <!-- settings-->
+                                         <!-- /.row -->
+                                         <div class="row">
+                                             <div class="col-lg-10">
+                                                 <div class="panel panel-default">
+                                                     <div class="panel-heading">
+                                                         Settings<p style="float:right;"><a href="#">Cancel</a></p>
+                                                     </div>
+
+                                                     <div class="panel-body">
+                                                       <!-- settings-->
+                                                       <div class="row">
+                                                       <div class="col-lg-12">
+                                                       <form class="form-horizontal ">
+                                                       <div class="row sp">
+                                                        <div class="col-sm-9">
+                                                          <div class="form-group">
+                                                            <label class="col-sm-3 control-label" for="textInput2-modal-markup">Primary Meter*</label>
+                                                            <div class="col-sm-5">
+                                                              <input type="radio" name="gender" value="male"> Mile<br>
+                                                   <input type="radio" name="gender" value="female"> Kilometers<br>
+                                                   <input type="radio" name="gender" value="other"> Hours
+                                                   <p>Select how you measure utilization for this vehicle</p>
+                                                          </div>
+                                                          </div>
+                                                         </div>
+
+
+                                                       <div class="col-sm-3">
+                                                         <label class=" control-label" for="textInput-modal-markup">
+                                                      Current Reading</label>
+                                                        <input type="text" id="" class="form-control"><br>
+                                                        <label class=" control-label" for="textInput-modal-markup">
+                                                     Average usage per Day</label>
+                                                       <input type="text" id="" class="form-control">
+
+
+                                                           <label class="checkbox-inline">
+                                                               <input type="checkbox">Automatically calculate
+                                                           </label>
+                                                      </div>
+
+
+
+                                               </div><br>
+                                               <div class="row sp">
+                                                <div class="col-sm-9">
+                                                  <div class="form-group">
+                                                    <label class="col-sm-3 control-label" for="textInput2-modal-markup">Secondary Meter</label>
+
+                                                    <div class="col-sm-9">
+                                                    <label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"></div></label>
+                                                       <p>Turn on to track an additional meter, such as a concrete mixer, street sweeper, cleaning equipment, etc</p>
+                                                  </div>
+                                                </div>
+                                                 </div>
+                                       </div>
+                                       <div class="row sp">
+                                        <div class="col-sm-9">
+                                          <div class="form-group">
+                                            <label class="col-sm-3 control-label" for="textInput2-modal-markup">Fuel Unit*</label>
+
+                                            <div class="col-sm-9">
+                                              <input type="radio" name="Galoons" value="Galoons"> Galoons(US)<br>
+                                   <input type="radio" name="Gallons" value="Gallons"> Gallons(UK)<br>
+                                   <input type="radio" name="Liters" value="Liters"> Liters
+                                   <p>Note: Sets the volume units used when entering fuel entries for this vehicle</p>
+                                          </div>
+                                          </div>
+                                         </div>
+                               </div>
+                               <div class="row sp">
+                                <div class="col-sm-9">
+                                  <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="textInput2-modal-markup">Measurement Unit*</label>
+
+                                    <div class="col-sm-9">
+                                      <input type="radio" name="imperial" value="imperial"> Imperial(inches,pounds,gallons, miles)<br>
+                           <input type="radio" name="Metric" value="Metric"> Metric(Centimeters, kilograms, liters, kilometers)<br>
+
+                           <p>Note: Sets the volume units used when entering fuel entries for this vehicle</p>
+                                  </div>
+                                  </div>
+                                 </div>
+                       </div>
+                       <hr>
+
+                     <p style="float:right;">
+
+                     <button type="button" class="btn btn-primary">Save</button>
+                       </p>
+                     </form>
+                   </div>
+
+               </div>
+               <!-- /.row (nested) -->
+
+                <!-- settings-->
+                </div>
+              <!-- /.panel-body -->
+              </div>
+              <!-- /.panel -->
+               </div>
+               <!-- /.col-lg-12 -->
+               </div>
+               <!-- /.row -->
+
+
+                              <!-- settings-->
+
+
+
+                            </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <!-- /#wrapper -->
+<script>
+
+</script>
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
